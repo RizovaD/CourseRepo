@@ -26,9 +26,15 @@ header nav ul li a:hover {
 main {
   text-align: center;
 }
-main h1 {
+main h1
+{
   margin: 10px 0;
 }
+
+main .about-atscale h3 {
+  margin: 10px 0;
+}
+
 main .search-bar {
   margin-bottom: 10px;
 }
@@ -37,32 +43,51 @@ main .search-bar input {
   border-radius: 15px;
   border: 1px solid #c7c7c7;
 }
-main .search-bar button {
+main .search-bar button,
+main .take-a-tour button {
   padding: 5px;
   border-radius: 10px;
   border: 1px solid #c7c7c7;
   font-weight: 500;
 }
-main .search-bar button:hover {
+main .search-bar button:hover,
+main .take-a-tour button:hover {
   cursor: pointer;
   background-color: #c9c9c9;
 }
-main .image-container img {
-  width: 250px;
-  height: 200px;
-  border-radius: 10px;
-}
+
 main .image-container img:hover {
   scale: 1.1;
 }
-main .description p {
+
+main .atscale-in-action img{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+main .description p,
+main .about-atscale p,
+main .additional-info p {
   width: 500px;
   margin: 0 auto;
 }
 
+main .additional-info p {
+  margin-bottom: 15px;
+}
+
 main .description h3,
-main .description h4 {
+main .description h4,
+main .about-atscale h3,
+main .about-atscale h1 {
   margin-bottom: 10px;
+}
+
+main .take-a-tour {
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: 500;
 }
 
 footer {
