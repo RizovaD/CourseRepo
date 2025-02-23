@@ -3,77 +3,109 @@
   padding: 0px;
 }
 header {
-  background-color: black;
+  background-color: #333;
 }
 header nav {
   text-align: center;
 }
-
 header nav ul {
   list-style-type: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header nav ul li a {
   text-decoration: none;
-  color: aliceblue;
+  color: #fff;
+  margin-right: 15px;
 }
-
+header nav ul li a:hover {
+  color: #c7c7c7;
+}
 main {
   text-align: center;
+  padding-bottom: 50px;
+}
+main h1 {
+  margin: 10px 0;
 }
 
-main.desription {
-  width: 50px;
+main .about-atscale h3 {
+  margin: 10px 0;
 }
 
-main .image-conteiner img {
-  width: 250px;
-  height: 200px;
+main .search-bar {
+  margin-bottom: 10px;
 }
+main .search-bar input {
+  padding: 5px;
+  border-radius: 15px;
+  border: 1px solid #c7c7c7;
+}
+main .search-bar button,
+main .take-a-tour button {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #c7c7c7;
+  font-weight: 500;
+}
+main .search-bar button:hover,
+main .take-a-tour button:hover {
+  cursor: pointer;
+  background-color: #c9c9c9;
+}
+
+main .image-container img:hover {
+  scale: 1.1;
+}
+
+main .atscale-in-action img {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+main .description p,
+main .about-atscale p,
+main .additional-info p {
+  width: 500px;
+  margin: 0 auto;
+}
+
+main .additional-info p {
+  margin-bottom: 15px;
+}
+
+main .description h3,
+main .description h4,
+main .about-atscale h3,
+main .about-atscale h1 {
+  margin-bottom: 10px;
+}
+
+main .atscale-in-action h3,
+main .atscale-in-action h4
+{
+  margin-top: 15px;
+}
+
+main .take-a-tour {
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
 footer {
-  text-align: center;
-  background-color: black;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer p {
   color: #fff;
-}
-
-*{
-  margin: 0px;
-  padding: 0px;
-}
-header nav ul li {
-  text-align: center;
-  background-color: black;
-}
-
-
-header nav ul li a {
-  text-decoration: none;
-  color: aliceblue;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; 
-  gap: 20px; 
-  padding: 20px;
-}
-
-main section{
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  background-color: black;
-}
-
-footer h4{
-color: white;
-}
-
-footer p{
-  color: white;
 }
