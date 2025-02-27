@@ -1,30 +1,28 @@
 // first console log
 //console.log("Hello TypeScript");
 
-//let VS const 
+//let VS const
 
 let number: number = 5;
 number = 10;
 //console.log("number", number)
 
-const message: string = 'Welcome'
-
+const message: string = "Welcome";
 
 //String
 
-let welcomeMessage: string = "Hello, Donika!"
-let test: string = 'Rizova';
+let welcomeMessage: string = "Hello, Donika!";
+let test: string = "Rizova";
 
 let welcomeMessageLenght = welcomeMessage.length;
 //console.log("welcomMessageLenght",welcomeMessageLenght);
 
-
 // String interplolation
 let welcommessageDetais: string = `My welcome message lenght is ${welcomeMessageLenght}`;
-let userWelcomeMessage: string = `Welcome, ${test}`
+let userWelcomeMessage: string = `Welcome, ${test}`;
 //console.log(userWelcomeMessage);
 
-// Number 
+// Number
 let firstNumber: number = 5;
 let secondNumber: number = 10;
 
@@ -37,7 +35,7 @@ let drvide = firstNumber / secondNumber;
 
 // Boolen (true/false)
 
-let isGreater: boolean = firstNumber > secondNumber
+let isGreater: boolean = firstNumber > secondNumber;
 let isLower: boolean = firstNumber < secondNumber;
 let isEqual: boolean = firstNumber === secondNumber;
 let isGreaterOrEqual: boolean = firstNumber >= secondNumber;
@@ -56,42 +54,43 @@ stringValue = [10, 10, 10];
 
 // Ternary Operator
 
-const isPositiveNum = 5 > 0 ? "The number is positive" : "The numer is negative"
+const isPositiveNum =
+  5 > 0 ? "The number is positive" : "The numer is negative";
 //console.log(typeof isPositiveNum);
 
-
 const age: number = 45;
-const myName: string = "Donika"
-const personalDescription = age < 40 
-? `${myName} is younger them 40. She is ${age} years old.` 
-: `${myName} is older then 40. She is ${age}`;
+const myName: string = "Donika";
+const personalDescription =
+  age < 40
+    ? `${myName} is younger them 40. She is ${age} years old.`
+    : `${myName} is older then 40. She is ${age}`;
 
-const personalName = `Her name is "${myName}".`
+const personalName = `Her name is "${myName}".`;
 
 //console.log("personalName", personalName)
 
 // If else Statement
 
-if(age < 40){
-console.log('Age are lower then 40')
+if (age < 40) {
+  console.log("Age are lower then 40");
 } else {
-//console.log("Age are grater then 40")
-};
+  //console.log("Age are grater then 40")
+}
 
 const num1: number = 400;
 
-if(num1 <= 10){
-console.log("The number is lower then 10.")
-} else if (num1 >100){
-console.log("The number is grater than 100.")
-} else if (num1 > 80){
+if (num1 <= 10) {
+  console.log("The number is lower then 10.");
+} else if (num1 > 100) {
+  console.log("The number is grater than 100.");
+} else if (num1 > 80) {
   console.log("The numeber is lower then 100");
-} else{
-  console.log("The number is between 10 and 100")
+} else {
+  console.log("The number is between 10 and 100");
 }
 
 //Type Alias
-type personInfoType = string | number
+type personInfoType = string | number;
 
-const personNameInfo: personInfoType = "Ivan"
+const personNameInfo: personInfoType = "Ivan";
 const personAnggInf: personInfoType = 25;

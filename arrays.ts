@@ -1,4 +1,4 @@
-let  numbersArray: number[] = [1, 2, 3, 4, 5];
+let numbersArray: number[] = [1, 2, 3, 4, 5];
 let stringsArray: string[] = ["apple", "Bannana", "Pear", "Peach", "Grape"];
 let stringAndNumber: (number | string)[] = ["Pesh", "Gosho", 2, "3"];
 
@@ -14,7 +14,7 @@ numbersArray.pop();
 console.log("fruits", fruits);
 
 // delete from first position
-fruits.shift()
+fruits.shift();
 
 //added in first positon
 numbersArray.unshift(5);
@@ -25,14 +25,14 @@ let multiplNumbers = numbersArray.map((element) => element * 2);
 
 console.log("multyplayNumbers", multiplNumbers);
 
-
-let multyplayNumbers = numbersArray.map((element: number) => 
-{{
-  if (element > 2) {
-    return element *2;
-  } else{
-    return element;
-  }}
+let multyplayNumbers = numbersArray.map((element: number) => {
+  {
+    if (element > 2) {
+      return element * 2;
+    } else {
+      return element;
+    }
+  }
 });
 
 let filterNumsArray = numbersArray.filter((element) => element > 2);
