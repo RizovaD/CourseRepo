@@ -13,7 +13,7 @@ console.log("Digits without the first digit:", digitArray);
 // 3. Use the map method to create a new array and divide each number by 2  “num / 2” from [1, 2, 3, 4, 5].  Log the result.
 
 let devideNumbers: number[] = [10, 20, 30, 40, 50];
-let devideNumbers2 = devideNumbers.map((element) => element * 2);
+let devideNumbers2 = devideNumbers.map((element) => element / 2);
 console.log("The result of devide is:", devideNumbers2);
 
 // 4. Use the filter method to create a new array containing only numbers greater than 5 from [3, 7, 1, 9, 12, 4]. Log the result.
@@ -101,3 +101,11 @@ function calculateArea(width: number, height?: number): string {
 console.log(calculateArea(5));
 
 console.log(calculateArea(5, 10));
+
+// The other option is to check if height exist:
+
+//if (height) {
+ // area = width * height;
+  //} else {
+  //area = width * width
+  //}
