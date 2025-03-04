@@ -94,3 +94,25 @@ type personInfoType = string | number;
 
 const personNameInfo: personInfoType = "Ivan";
 const personAnggInf: personInfoType = 25;
+
+type Status =  "approved" | "rejected" | "pending" | "fullField" ;
+
+const currentStatus: Status = "fullField" 
+
+type PersonData = {
+  name: string;
+  lastName: string;
+  age: number;
+  city?: string;
+
+}
+
+//function displayPersonalData({age, name, lastName, city} : PersonData){
+ // if (city){
+   // return `${name} ${lastName} from ${city}`
+ // }
+
+ // return `My name is ${name} ${lastName} and I'm ${age} years old`
+//}
+
+//displayPersonalData(45, "Donika", "Rizova")
