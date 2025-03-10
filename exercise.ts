@@ -2,44 +2,60 @@
 
 // Step One: Declare Typescript interface "Country"
 // and add types name: string, capital: string, population: number, language: string
+
 interface Country {
   name: string;
-  capital: string;
+  capital: string | "Sofia";
   population: number;
   language: string;
 }
 
 // Step Two: Declare an object "country" with properties following "Country" interface
-const country: Country = {
+
+const firstCountry: Country = {
   name: "Bulgaria",
   capital: "Sofia",
   population: 70000000,
   language: "bulgarian",
 };
 
+const secondCountry: Country = {
+  name: "Italy",
+  capital: "Rome",
+  language: "italian",
+  population: 59000000,
+};
+
 // Step Three: Declare a function "displayCountryDetails" which receives "country" object and
 //displays the details for it
-function displayCountryDetails(country: Country): string {
-  return `The capital of ${country.name} is ${country.capital}.
-  The official language is ${country.language} and the population of ${country.population} people`;
+
+function displayCountryDetails(countryObj: Country): string {
+  return `The capital of ${countryObj.name} is ${countryObj.capital}. The official language is ${countryObj.language} and population of ${countryObj.population} people.`;
 }
 
-const countryDetails = displayCountryDetails(country);
-console.log(countryDetails);
+const detailsAboutBulgaria = displayCountryDetails(firstCountry);
+const detailsAboutItaly = displayCountryDetails(secondCountry);
+
+// console.log(detailsAboutBulgaria, "\n", detailsAboutItaly);
+
+//
 
 // Exercise Two
 // Step One: Declare TypeScript interface "Student"
 // Add propertis id: number, name: string, age: number, grade: number
+
 interface Student {
   id: number;
   name: string;
   age: number;
   grade: number;
 }
+
 // Step Two: Declare an object with properties following interface "Student"
-const studentOne: Student = { id: 13, name: "Donika", age: 45, grade: 5 };
-const studentTwo: Student = { id: 10, name: "Tosho", age: 15, grade: 4 };
-const studentThree: Student = { id: 11, name: "ivo", age: 20, grade: 6 };
+
+const studentOne: Student = { id: 1, name: "Pesho", age: 20, grade: 6 };
+const studentTwo: Student = { id: 2, name: "Tosho", age: 22, grade: 5 };
+const studentThree: Student = { id: 3, name: "Ivan", age: 25, grade: 5 };
 
 // Step Three: Declare array "students" with objects of type "Student"
 
@@ -62,6 +78,23 @@ function getStudents(students: Student[]): string[] {
 const studentsNames = getStudents(studentsArr);
 console.log("studentsNames", studentsNames);
 
+//
+
 //Exercise Three
 // Declare a function "sortStudents" that receive students array result from the previous exercise
 // and sort them by ascending
+
+function sortStudents(students: Student[]): Student[] {
+  return students.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+//checking 
+const students: Student[] = [
+  { id: 1, name: "Donika", age: 20, grade: 6 },
+  { id: 2, name: "Anna", age: 22, grade: 3 },
+  { id: 3, name: "Bobi", age: 19, grade: 4 },
+  { id: 4, name: "Zoia", age: 21, grade: 5 },
+];
+
+const sortedStudents = sortStudents(students);
+console.log(sortedStudents);
