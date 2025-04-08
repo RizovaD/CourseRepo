@@ -1,7 +1,7 @@
 import { test, expect, Page } from "@playwright/test";
 import path from "path";
 
-interface Results{
+interface Results {
   username: string;
   password: string;
   dropdownValue: string;
@@ -10,41 +10,50 @@ interface Results{
 const results = {
   username: "Donika",
   password: "P@ssword01",
-  dropdownValue: "dd3"
-}
-
-const fillFields = async (page: Page,resultsObj:Results) => {
-  //locate and fill Username input
-  const usernameInput = page.locator("xpath=//input[@name='username']");
-  await expect(usernameInput).toBeVisible();
-  await usernameInput.fill("Donika");
-  await expect(usernameInput).toHaveValue(resultsObj.username);
-
-  //Locate and fill in Password
-  const passwordInput = page.locator("xpath=//input[@name='password']");
-  await expect(passwordInput).toBeVisible();
-  await passwordInput.fill(resultsObj.password);
-  await expect(passwordInput).toHaveValue(resultsObj.password);
-
-  //Locate and check checkbox
-  const checkboxE1 = page.locator('xpath=//input[@value="cb2"]');
-  await expect(checkboxE1).toBeVisible();
-  await checkboxE1.check();
-  await expect(checkboxE1).toBeChecked();
-
-  //Locate and click radio buuton
-  const radioButtonE1 = page.locator('xpath=//input[@value="rd2"]');
-  await expect(radioButtonE1).toBeVisible();
-  await radioButtonE1.check();
-  await expect(radioButtonE1).toBeChecked();
-
-  //Locate and select dropdown
-  const dropdown = page.locator('xpath=//select[@name="dropdown"]');
-  await expect(dropdown).toBeVisible();
-  await dropdown.selectOption(resultsObj.dropdownValue);
-  await expect(dropdown).toHaveValue(resultsObj.dropdownValue);
+  dropdownValue: "dd3",
 };
 
+const fillFields = async (page: Page, resultsObj: Results) => {
+  //locate and fill Username input
+  await test.step("Enter username", async () => {
+    const usernameInput = page.locator("xpath=//input[@name='username']");
+    await expect(usernameInput).toBeVisible();
+    await usernameInput.fill("Donika");
+    await expect(usernameInput).toHaveValue(resultsObj.username);
+  });
+
+  await test.step("Enter Password", async () => {
+    //Locate and fill in Password
+    const passwordInput = page.locator("xpath=//input[@name='password']");
+    await expect(passwordInput).toBeVisible();
+    await passwordInput.fill(resultsObj.password);
+    await expect(passwordInput).toHaveValue(resultsObj.password);
+  });
+
+  await test.step("Locate and check checkbox", async () => {
+    //Locate and check checkbox
+    const checkboxE1 = page.locator('xpath=//input[@value="cb2"]');
+    await expect(checkboxE1).toBeVisible();
+    await checkboxE1.check();
+    await expect(checkboxE1).toBeChecked();
+  });
+
+  await test.step("Locate and click radio buuton", async () => {
+    //Locate and click radio buuton
+    const radioButtonE1 = page.locator('xpath=//input[@value="rd2"]');
+    await expect(radioButtonE1).toBeVisible();
+    await radioButtonE1.check();
+    await expect(radioButtonE1).toBeChecked();
+  });
+
+  await test.step("Locate and select dropdownn", async () => {
+    //Locate and select dropdown
+    const dropdown = page.locator('xpath=//select[@name="dropdown"]');
+    await expect(dropdown).toBeVisible();
+    await dropdown.selectOption(resultsObj.dropdownValue);
+    await expect(dropdown).toHaveValue(resultsObj.dropdownValue);
+  });
+};
 //1. Homework -  Add the web form link as an environment variable and use it in the beforeEach hook (https://testpages.herokuapp.com/styled/basic-html-form-test.html).
 // const PAGE_URL =
 //   process.env.PAGE_URL ||
